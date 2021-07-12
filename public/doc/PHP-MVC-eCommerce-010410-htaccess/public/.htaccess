@@ -1,0 +1,8 @@
+<ifModule mod_rewrite.c>
+Options -Multiviews
+RewriteEngine On
+RewriteBase /0412-PHP-MVC-eCommerce/PHP-MVC-eCommerce-010410-htaccess/public
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+</IfModule>
